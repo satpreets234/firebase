@@ -30,6 +30,6 @@ const userRoutes=require('./routes/userRoutes');
 const { createReadStream } = require('fs');
 app.use('/user',userRoutes);
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log('server listening on port 9999');
 })
